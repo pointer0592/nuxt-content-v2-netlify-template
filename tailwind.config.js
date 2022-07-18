@@ -1,19 +1,30 @@
+const colors = require('tailwindcss/colors')
+
 module.exports = {
   content: [
-    "./components/**/*.{js,vue,ts}",
-    "./layouts/**/*.vue",
-    "./pages/**/*.vue",
-    "./plugins/**/*.{js,ts}",
-    "./content/**/*.{md,yml,json,yaml,toml,csv}",
-    "./app.vue",
+    './components/**/*.{js,vue,ts}',
+    './layouts/**/*.vue',
+    './pages/**/*.vue',
+    './plugins/**/*.{js,ts}',
+    './content/**/*.{md,yml,json,yaml,toml,csv}',
+    './app.vue'
   ],
-  darkMode: "class",
+  darkMode: 'class',
   theme: {
     extend: {
-      fontFamily: {
-        sans: ["Inter"],
+      colors: {
+        primary: {
+          DEFAULT: colors.violet[700],
+          ...colors.violet
+        }
       },
-    },
+      fontFamily: {
+        sans: ['Inter']
+      }
+    }
   },
-  plugins: [require("@tailwindcss/typography")]
+  plugins: [
+    require('@tailwindcss/typography'),
+    require('@tailwindcss/typography')
+  ]
 }
